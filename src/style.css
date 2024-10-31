@@ -130,6 +130,13 @@ section {
   background-size: cover;
 }
 
+/* Media query for devices with a width less than 600px */
+@media screen and (max-width: 600px) {
+  #home {
+    background-attachment: scroll; /* Disable parallax */
+  }
+}
+
 #casa {
   background-image: url('img/casa/balcony1.jpeg');
   background-position: center;

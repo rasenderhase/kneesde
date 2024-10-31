@@ -187,8 +187,8 @@ section {
 
 /* Create two equal columns that sits next to each other */
 .column-2 {
-  flex: 49%;
-  max-width: 49%;
+  flex: 48%;
+  max-width: 48%;
   padding: 0 4px;
 }
 

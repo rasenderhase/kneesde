@@ -1,0 +1,183 @@
+:root {
+  --primary:      hsl(196, 50%, 90%);
+  --primary-b:    hsl(196, 80%, 40%);
+  --primary-c:    hsl(196, 50%, 20%);
+  --secondary:    hsl(16, 80%, 40%);
+  --secondary-b:  hsl(16, 50%, 90%);
+  --secondary-c:  hsl(16, 50%, 20%);
+  --text: var(--secondary-c);
+  --menu: var(--secondary-b);
+  --logo: var(--secondary);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex; /* Enable flexbox for the body */
+  flex-direction: column; /* Stack elements vertically */
+  height: 100%;
+}
+
+main {
+  height: calc(100% - 1.4em - 10px);
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed; /* Prevent scrolling */
+  background-color: var(--primary);
+  width: 100%;
+  z-index: 99;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: fixed; /* Prevent scrolling */
+  width: 100%;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+.menu li:not(:first-child) {
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 24px; /* Text height */
+  color: var(--secondary);
+}
+
+.menu a:hover {
+  background-color: var(--secondary-b);
+}
+
+.menu-icon {
+  display: none; /* Hide the icon by default */
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Hide the menu on smaller screens */
+  }
+
+  .menu-icon {
+    display: flex; /* Show the icon */
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 90px;
+    background-color: var(--primary-b);
+    padding: 20px;
+  }
+
+  .menu.active li {
+    margin: 10px 0;
+  }
+}
+
+.logo {
+  width: 6em;
+  color: var(--logo);
+}
+
+section {
+  padding-top: 69px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  text-align: center;
+  color: var(--text);
+  min-height: 100%;
+}
+
+#home h2 {
+  font-size: 48px;
+}
+
+#home {
+  font-size: 32px;
+  color: var(--primary);
+  background-image: url('img/home/home.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#casa {
+  background-image: url('img/casa/balcony1.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 0;
+}
+
+#casa-background {
+  background-color: hsla(0, 0%, 100%, 0.6);
+  z-index: 2;
+  min-height: 500px;
+  padding-top: 70px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 32%;
+  max-width: 32%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text);
+  background-color: var(--secondary-b);
+  position: relative;
+}

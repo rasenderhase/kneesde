@@ -131,7 +131,7 @@ section {
 }
 
 /* Media query for devices with a width less than 600px */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   #home {
     background-attachment: scroll; /* Disable parallax */
   }

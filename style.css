@@ -123,7 +123,7 @@ section {
 #home {
   font-size: 32px;
   color: var(--primary);
-  background-image: url('img/home/home.png');
+  background-image: url('img/home/home.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -152,14 +152,14 @@ section {
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
+/* Create three equal columns that sits next to each other */
+.column-3 {
   flex: 32%;
   max-width: 32%;
   padding: 0 4px;
 }
 
-.column img {
+.column-3 img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
@@ -167,12 +167,38 @@ section {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column {
+  .column-3 {
     flex: 100%;
     max-width: 100%;
   }
 }
 
+.wir {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Create two equal columns that sits next to each other */
+.column-2 {
+  flex: 49%;
+  max-width: 49%;
+  padding: 0 4px;
+}
+
+.column-2 img {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  width: 60%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-2 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
 footer {
   text-align: center;

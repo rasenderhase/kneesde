@@ -98,10 +98,7 @@ nav {
   }
 
   .menu li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 0px;
+      margin: 10px 0 10px 20px;
   }
 }
 
@@ -111,11 +108,8 @@ nav {
 }
 
 section {
-  padding-top: 69px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  text-align: center;
+    padding: 69px 20px 0;
+    text-align: center;
   color: var(--text);
   min-height: 100%;
 }
